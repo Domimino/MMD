@@ -47,12 +47,12 @@ p {
     z-index: -1;
 }
 
- /* Fixní navigační panel */
- nav {
+/* Fixní navigační panel */
+nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
+    background-color:linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -91,13 +91,13 @@ p {
 }
 
 body {
-    padding-top: 60px; /* Zajistí místo pro fixní navigaci */
+    padding-top: 10px; /* Zajistí místo pro fixní navigaci */
 }
 
 /* Hlavička */
 header {
     text-align: center;
-    padding-top: 60px ;
+    padding: 110px 20px;
 }
 
 .logo {
@@ -225,11 +225,10 @@ nav {
 }
 
 .profile-pic img {
-    width: 140px;
+    width: 150px;
     height: 200px;
     border-radius: 25%;
     margin-bottom: 5px;
-    border-color: black;
 }
 
 footer {
