@@ -1,9 +1,19 @@
-    /* Obecné styly */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #333;
     overflow-x: hidden;
+    padding-top: 60px; /* Prostor pro fixní navigaci */
+}
+
+/* Styl pro h1 nadpisy */
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2e2b2b; /* Nahraď hex kódem požadované barvy */
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.4; /* Pro lepší čitelnost */
 }
 
 /* Styl pro h2 nadpisy */
@@ -36,7 +46,6 @@ p {
     line-height: 1.4; /* Pro lepší čitelnost */
 }
 
-/* Fixní gradientní pozadí */
 .gradient-bg {
     position: fixed;
     top: 0;
@@ -47,147 +56,185 @@ p {
     z-index: -1;
 }
 
-/* Fixní navigační panel */
+ /* Globální styl */
+ body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+/* Navigace */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
+    background: linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-label {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Media query pro mobilní zařízení */
-@media (max-width: 768px) {
-    /* Navigační panel */
+.menu-label img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.nav-bar {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    transition: top 0.3s ease;
+}
+
+.menu-toggle:checked + .menu-label img {
+    transform: rotate(180deg);
+    content: url('navicon.jpg');
+}
+
+.menu-toggle:checked ~ .nav-bar {
+    top: 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Specifické styly pro mobilní zobrazení */
+@media (max-width: 767px) {
+    .nav-bar a {
+        width: 80%; /* Jednotná šířka pro všechna tlačítka na mobilu */
+        max-width: none;
+    }
+}
+
+/* Specifické styly pro desktopové zobrazení */
+@media (min-width: 768px) {
+    .menu-label {
+        display: none;
+    }
+
     .nav-bar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 20px;
     }
 
     .nav-bar a {
-        width: 100%;
-        text-align: center;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background 0.2s ease;
+        width: auto; /* Přizpůsobení obsahu na desktopu */
     }
 
-    /* Obrázky */
-    .pic {
-        width: calc(50% - 10px);
-        height: auto;
-    }
-
-    .pici {
-        width: calc(50% - 10px);
-        height: auto;
-    }
-
-    header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    .nav-bar a:hover {
+        background: #f0f0f0;
     }
 }
 
-body {
-    padding-top: 10px; /* Zajistí místo pro fixní navigaci */
-}
-
-/* Hlavička */
-header {
-    text-align: center;
-    padding: 110px 20px;
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .logo {
-    width: 140px;
-    height: 140px;
+    text-align: center;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     margin-bottom: 5px;
     margin-top: 15px;
 }
 
-.pic {
-    width: 350px;
-    height: 200px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-right: 5px;
-    
+.pic-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 20px;
 }
+
+.pic {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.pic:hover {}
+    transform: scale(1.05);
+
 
 .pici {
-    width: 250px;
-    height: 200px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-right: 5px;
-  
-}
-
-header h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-}
-
-header p {
-    font-size: 16px;
-    font-weight: 300;
-    margin: 10px 0 0;
-}
-
-/* Navigační panel */
-nav {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.nav-bar {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-bar li {
-    display: inline-block;
-}
-
-.nav-bar a {
-    display: block;
-    text-decoration: none;
-    background: white;
-    color: #333;
-    font-weight: 600;
-    padding: 10px 20px;
+    width: 46%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease;
 }
 
-.nav-bar a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
-/* Bílý obdélník */
+.pici:hover {
+    transform: scale(1.05);
+}
 .content-box {
-    background: white;
-    margin: 40px auto;
     max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
+    background: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
 }
 
-
-/* Nabídka služeb */
-.service-list {
+ /* Nabídka služeb */
+ .service-list {
     list-style: none;
     padding: 0;
     text-align: center;
@@ -218,8 +265,8 @@ nav {
     margin: 5px 0 0;
 }
 
-/* Sekce O Mně */
-.profile-pic {
+  /* Sekce O Mně */
+  .profile-pic {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -268,4 +315,19 @@ footer {
 .footer-icons img {
     width: 24px; /* Velikost ikony */
     height: 24px;
+}
+
+@media (max-width: 768px) {
+    .pic-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .pic {
+        width: 30%; /* Adjust width for smaller screens */
+    }
+    .logo {
+        width: 140px; /* Adjust width for smaller screens */
+        height: 140px; /* Adjust height for smaller screens */
+    }
 }
