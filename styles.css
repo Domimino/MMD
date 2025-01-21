@@ -72,59 +72,83 @@ nav {
     width: 100%;
     background: linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Pro mobil i desktop */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px 20px;
+}
+
+.nav-logo {
+    margin-right: auto; /* Vytvoří mezeru mezi logem a menu */
+}
+
+.nav-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
 }
 
 .menu-toggle {
     display: none;
 }
 
+.menu-toggle:checked + .menu-label img {
+    transform: rotate(180deg);
+}
+
+.menu-toggle:checked ~ .nav-bar {
+    top: 0;
+}
+
 .menu-label {
-    position: fixed;
-    top: 10px;
-    right: 20px;
     cursor: pointer;
     z-index: 1001;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-label img {
     width: 30px;
     height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     transition: transform 0.3s ease;
+    border-radius: 25%;
+    object-fit: contain;
+
 }
 
 .nav-bar {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     list-style: none;
     transition: top 0.3s ease;
-}
-
-.menu-toggle:checked + .menu-label img {
-    transform: rotate(180deg);
-    content: url('navicon.jpg');
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    background:linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-toggle:checked ~ .nav-bar {
-    top: 0;
+    display: flex; /* Zobrazení menu po zaškrtnutí checkboxu */
+    position: absolute; /* Absolutní pozicování pro překrytí obsahu */
+    top: 100%; /* Umístění pod navigaci */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar a {
@@ -132,11 +156,30 @@ nav {
     color: #333;
     font-size: 18px;
     padding: 10px 20px;
-    background: white;
     border-radius: 5px;
     transition: background 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+}
+
+.nav-bar a:hover {
+    background: #f0f0f0;
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex; /* Menu vpravo na desktopu */
+        align-items: center;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 20px;
+        width: auto;
+    }
+    .menu-label {
+        display: none;
+    }
 }
 
 /* Specifické styly pro mobilní zobrazení */
@@ -207,11 +250,6 @@ nav {
     transition: transform 0.3s ease;
 }
 
-
-.pic:hover {}
-    transform: scale(1.05);
-
-
 .pici {
     width: 46%;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -224,14 +262,19 @@ nav {
 .pici:hover {
     transform: scale(1.05);
 }
+
 .content-box {
-    max-width: 800px;
+    max-width: 800px; /* Zachovejte maximální šířku */
     margin: 40px auto;
     padding: 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    min-height: 400px; /* Nastavte minimální výšku (upravte dle potřeby) */
+    display: flex; /* Povolí flexboxové vlastnosti */
+    flex-direction: column; /* Umožní vertikální centrování */
+    justify-content: center; /* Vertikálně centruje obsah */
+  }
 
  /* Nabídka služeb */
  .service-list {
@@ -331,3 +374,302 @@ footer {
         height: 140px; /* Adjust height for smaller screens */
     }
 }
+
+/* Kontaktní formulář */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Změna šířky na procenta */
+    max-width: 500px; /* Maximální šířka pro větší obrazovky */
+    margin: 20px auto; /* Centrování formuláře */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%; /* Důležité pro responzivitu */
+    box-sizing: border-box; /* Zahrnutí paddingu a borderu do šířky */
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3e8e41;
+}
+
+/* Media Query pro menší obrazovky (např. mobily) */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 95%; /* Ještě menší šířka pro menší mobily */
+        padding: 10px; /* Menší padding */
+    }
+}
+
+  /* Kontaktní formulář */
+--------
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    padding-top: 60px; /* Prostor pro fixní navigaci */
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #c4b8a0, #d3ba8b);
+    z-index: -1;
+}
+
+/* Sekce s parallax efektem */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.content-box {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Odkaz Zjistit více */
+.more-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.more-link:hover {
+    background-color: #555;
+}
+
+/* Rozbal info */
+.toggle-button {
+    background-color: #333; /* Příklad barvy tlačítka */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+.toggle-button:hover {
+    background-color: #555;
+}
+
+.hidden-content {
+    max-height: 0;
+    text-align: left;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animace pro plynulé rozbalování */
+    margin-top: 10px;
+}
+
+.hidden-content.show {
+    max-height: 500px; /* Nastavte rozumnou maximální výšku */
+    text-align: left;
+}
+
+.about-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce se stejnou šířkou */
+    gap: 1px; /* Mezera mezi sloupci */
+    align-items: center; /* Vertikální zarovnání obsahu */
+}
+
+.about-parallax {
+    background-image: url('bank.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pro mobilní zobrazení */
+@media (max-width: 767px) {
+    .section {
+        padding: 20px 10px;
+        margin: 10px 10px;
+    }
+    .about-parallax {
+        min-height: auto; /* Důležité pro mobily */
+        padding: 40px 10px; /* Přidáno odsazení pro text */
+        display: block;
+        text-align: center;
+    }
+}
+
+.about-us-image img {
+    max-width: 100%; /* Obrázek se přizpůsobí šířce kontejneru */
+    height: auto;
+    display: block; /* Odstraní mezeru pod obrázkem */
+    margin: 0px auto;
+    border-radius: 15px;
+}
+
+.about-us-content {
+    text-align: left; /* Zarovnání textu vpravo */
+}
+
+.about-us-content .short-description {
+    margin-bottom: 20px;
+}
+
+    /* Příklad pro jednotlivé sekce */
+#intro {
+    background-image: url('masage.jpg');
+}
+
+
+#about {
+    background-image: url('relax.jpg');
+}
+
+#services {
+    background-image: url('banka.jpg');
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0; /* Přidáno odsazení shora a zdola */
+    color: white; /* Barva textu pro lepší čitelnost na pozadí */
+}
+
+.content {
+    max-width: 960px; /* Omezení šířky obsahu pro lepší čitelnost */
+    margin: 0 auto; /* Centrování obsahu */
+    padding: 0 20px; /* Přidáno odsazení zleva a zprava */
+    text-align: center;
+}
+
+.content h2{
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f5f5f5; /* Světlé pozadí */
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666; /* Šedý text */
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    background-color: #bbb; /* Zvýraznění při hover efektu */
+}
+
+.footer-icons img {
+    width: 24px; /* Velikost ikony */
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .pic-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .pic {
+        width: 30%; /* Adjust width for smaller screens */
+    }
+    .logo {
+        width: 140px; /* Adjust width for smaller screens */
+        height: 140px; /* Adjust height for smaller screens */
+    }
+}
+

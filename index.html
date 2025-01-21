@@ -5,179 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobilní Masér Dominik</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="Script.js" defer></script>
 </head>
 <body>
     <div class="gradient-bg"></div>
 
     <!-- Navigační panel -->
     <nav>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-label">
-            <img src="navicon.jpg" alt="Rozbalit navigaci">
-        </label>
-        <ul class="nav-bar">
-            <li><a href="#nabidka">Nabídka</a></li>
-            <li><a href="#omně">O Mně</a></li>
-            <li><a href="#podminky">Podmínky</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            
-        </ul>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-label">
+                <img src="navicon.png" alt="Rozbalit navigaci">
+            </label>
+            <ul class="nav-bar">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="#about">O Mně</a></li>
+                <li><a href="nabidka.html">Nabídka</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
 
-
-    <!-- Hlavička -->
-    <header>
+    <!-- Úvodní sekce -->
+    
+        <section id="intro" class="parallax" style="background-image: url('masage.jpg');">
+        <div class="content">
+            <div class="content-box">
+            <div><center><img src="logo.jpg" alt="Logo" class="logo"></center></div>
             <h1>Mobilní Masér Dominik</h1>
-    </header>
+            <h3>Úleva a relaxace přímo do Vašeho domova</h3>
+            </div>
+        </div>
+        </section>
+    
 
-    <center><p>Úleva a relaxace přímo do vašeho domova</p></center>
-
-    <div><center><img src="logo.jpg" alt="Logo" class="logo"></center></div>
-
-    <!-- Obrázky -->
-    <div class="pic-container">
-        <img src="masage.jpg" alt="Masáž" class="pic">
-        <img src="salon.jpg" alt="Salon" class="pic">
-        <img src="banka.jpg" alt="Baňka" class="pic">
-    </div>
-
-    <!-- Obsah -->
-    <div class="content-box">
-        <section id="nabidka">
-            <center><h2>Nabídka</h2></center>
-            <ul class="service-list">
-                <li>
-                    <strong>Záda 30 / 60 min</strong>
-                    <span>490 Kč / 890 Kč</span>
-                </li>
-                <li>
-                    <strong>Záda a šíje 45 / 60 min</strong>
-                    <span>690 Kč / 890 Kč</span>
-                </li>
-                <li>
-                    <strong>Dolní končetiny 45 min</strong>
-                    <span>690 Kč</span>
-                </li>
-                <li>
-                    <strong>Záda, šíje, dolní končetiny 60 min</strong>
-                    <span>990 Kč</span>
-                </li>
-                <li>
-                    <strong>Masáž celého těla 90 min</strong>
-                    <span>1290 Kč</span>
-                    <p>(Záda, šíje, horní končetiny, dolní končetiny)</p>
-                </li>
-                <li>
-                    <strong>Sportovně regenerační masáž 60 min</strong>
-                    <span>950 Kč</span>
-                </li>
-                <li>
-                    <strong>Kompletní masáž zad 60 / 90 min</strong>
-                    <span>890 Kč / 1290 Kč</span>
-                    <p>baňky (statické)</p>
-                </li>
-                <li>
-                    <strong>Masáž baňkami 30 / 60 min</strong>
-                    <span>450 Kč / 890 Kč</span>
-                </li>
-                <li>
-                    <strong>Doprava</strong>
-                    <p>5 Kč/Km (Účtuje se cesta tam i zpět)</p>
-                    <p>V případě delší vzdálenosti (od 50 km) je cena za dopravu smluvní.</p>
-                </li>
-            </ul>
+        <section id="about" class="section about-parallax">
+            <div class="content">
+                <h2>O Mně</h2>
+                <div class="about-us-grid">
+                    <div class="about-us-image">
+                        <img src="id.jpeg" alt="O mně">
+                    </div>
+                    <div class="about-us-content">
+                        <h3 class="short-description">Ahoj, jsem Dominik, profesionální mobilní masér.</h3>
+                        <button class="toggle-button">Více o mně</button>
+                        <div class="hidden-content hidden">
+                            <h3>Jsem absolventem Fakulty tělesné kultury Univerzity Palackého v Olomouci. Masážím se věnuji již 6 let a svou práci neustále zdokonaluji dalším vzděláváním.</h3>
+                            <h3>Zastávám přístup holistické péče a funkční medicíny, díky čemuž se snažím nejen ulevit od akutních či chronických potíží, ale také podpořit celkovou rovnováhu těla a duše. Při práci s klienty preferuji individuální přístup, kdy se věnuji jejich potřebám s maximální péčí a empatií.</h3>
+                            <h3>Pokud hledáte maséra, který kombinuje odborné znalosti s osobním přístupem a láskou k pohybu, rád vám pomohu dosáhnout lepšího zdraví a pohody.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="omně">
-            <center><h2>O Mně</h2></center>
-            <center><div class="profile-pic img">
-                <img src="id.jpeg" alt="Dominik Pospíšil" class="logo">
-            </div></center>
-            <center><h3>Ahoj jmenuji se Dominik a jsem absolventem Fakulty tělesné kultury Univerzity Palackého v Olomouci. Masážím se věnuji již 6 let a svou práci neustále zdokonaluji dalším vzděláváním.
+    <!-- Sekce Služby -->
+    
+    <section id="services" class="parallax" style="background-image: url('banka.jpg');">
+        <div class="content">
+            <div class="content-box">
+            <h2>Nabídka</h2>
+            <h3>Od relaxačních masáží po sportovní regeneraci, nabízíme širokou škálu služeb přizpůsobených vašim potřebám.</h3>
+            <center><a href="nabidka.html" class="more-link">Zjistěte více</a></center>
+            </div>
+        </div>
+    </section>
+    
 
-                Zastávám přístup holistické péče a funkční medicíny, díky čemuž se snažím nejen ulevit od akutních či chronických potíží, ale také podpořit celkovou rovnováhu těla a duše. Při práci s klienty preferuji individuální přístup, kdy se věnuji jejich potřebám s maximální péčí a empatií.
-                
-                Pokud hledáte maséra, který kombinuje odborné znalosti s osobním přístupem a láskou k pohybu, rád vám pomohu dosáhnout lepšího zdraví a pohody.</h3></center>
-        </section>
+     <!-- Sekce Podmínky -->
+     
+     <section id="services" class="parallax" style="background-image: url('therapy.jpg');">
+        <div class="content">
+            <div class="content-box">
+            <h2>Podmínky</h2>
+            <h3>Abychom byli spokojení všichni :)</h3>
+            <center><a href="podminky.html" class="more-link">Dokumenty k nahlédnutí</a></center>
+            </div>
+        </div>
+    </section>
 
-        <section id="podminky">
-            <center><h2>Podmínky</h2></center>
-            <center><p>
-                Provozovatel: Masérské, rekondiční a regenerační služby je MMD, se sídlem: Hradišťská 52/68, Těrlicko, 73542
-                IČ: 21618101
-                Tel.: +420 739 950 965
-                E-mail: dominik.pospisil@outlook.cz
-                Provozní doba: dle telefonických objednávek
-                Oprávnění pro výkon činnosti: viz www.rzp.cz a IČ
-                
-                <center><p><u>Druh a rozsah poskytovaných služeb viz:</u></p></center>
-                
-                    <center><p>https://www.MMD.cz/nabídka/
-                Tyto služby jsou poskytovány v interiérech a exteriérech dle požadavků klienta. </p></center>
-                <center><p><u>Podmínky poskytnutí služby:</u></p></center>
-                
-                <center><p>- přístup k pitné tekoucí teplé vodě</p></center>
-                <center><p>- dostatečné osvětlení místnosti</p></center>
-                <center><p>- možnost převléknutí se do pracovního oděvu</p></center>
-                <center><p>- dostatečný prostor pro rozložení přenosného masérského stolu či podložky v případě masáže na zemi</p></center>
-                <center><p>- K masážím jsou využity produkty od firem Saloos, Janssen, Thalaspa a další k tomu určené.</p></center>
-                
-                <center><p><u>
-                Zásady provozu:</u></p></center>
-                <center><p>– prevence vzniku infekce a jiných onemocnění, včetně podmínek desinfekce
-                V sídle firmy je vyčleněný omyvatelný nábytek vhodný ke skladování čistého i špinavého prádla,
-                 masážních a desinfekčních prostředků. Je zamezeno při praní, sušení, žehlení a ukládání špinavého 
-                 osobního prádla styku s civilními věcmi. Pro transport pomůcek je využívána cestovní taška a obal na 
-                 masérské lůžko, vše je udržováno v maximální čistotě a desinfikováno.</p></center>
 
-                <center><p>
-                - Pracovní oděv je vždy čistý, dobře udržovatelný a je používán pouze k masážím. Oděv je z materiálu, 
-                který se dá dobře vyvářet a žehlit, frekvence jeho výměny je dle potřeby, minimálně každý den.</p></center>
-                <center><p>
-                - Jsou dodržovány hygienické zásady mytí rukou, nehty jsou vždy čisté a krátce ostříhané. Při transportu 
-                věcí ke klientům je s pomůckami nakládáno opatrně, aby nedošlo ke kontaminaci. Pro práci s desinfekcí a 
-                manipulací se špinavým prádlem jsou používány ochranné pracovní pomůcky – zejména rukavice. Při náhodné 
-                kontaminaci pokožky provozovatele nebo zákazníka biologickým materiálem (zejména krví) musí být provedena 
-                desinfekce kontaminovaného místa desinfekčním přípravkem s virucidním účinkem. K provozu služeb jsou 
-                používány jednorázové hygienické pomůcky. Nelze provádět výkony pokud jsou shledány kontraindikace k masáži.</p></center>
-                
-                <center><p><u>Desinfekce: </u></p></center>
-                <center><p>- provádí se omýváním, otíráním, postřikem formou pěny nebo aerosolem – důležité je dodržování 
-                doby expozice a koncentrace při použití desinfečních přípravků s mycími a čistícími vlastnostmi lze 
-                spojit etapu čištění a desinfekce k desinfekci se volí takové přípravky a postupy, které nepoškozují 
-                desinfikovaný materiál, nejsou toxické ani dráždivé k zabránění vzniku selekce, případně resistence 
-                mikrobů vůči přípravku dlouhodobě používanému, jsou střídány přípravky s různými aktivními látkami</p></center>
+    <!-- Sekce Kontakt -->
+    
+    <section id="services" class="parallax" style="background-image: url('salon.jpg');">
+        <div class="content">
+            <div class="content-box">
+            <h2>Kontakt</h2>
+            <h3>Napište mi nebo rovnou zavolejte a domluvíme se.</h3>
+            <center><a href="kontakt.html" class="more-link">Objednejte si mé služby</a></center>
+            </div>
+        </div>
+    </section>
 
-                <center><p><u>Úklid pomůcek a manipulace s prádlem:</u></p></center>
-                <center><p>– úklid lůžka a pomůcek je prováděn bezprostředně po ukončení masáže každého klienta</p></center>
-                <center><p>– čisté jednorázové pomůcky a pracovní oblečení je uloženo v čisté cestovní tašce popřípadě v sídle firmy v určených prostorách</p></center>
-                <center><p>– k transportu použitého, znečištěného osobního prádla je využito igelitové tašky, v případě znečištění pracovního oděvu je k dispozici náhradní čistý oděv</p></center>
-                <center><p>– veškerý znečištěný pracovní oděv je ukládán a prán mimo civilní ošacení</p></center>
-                
-                <center><p>Za dodržování výše uvedeného odpovídá: Mgr. Dominik Pospíšil</p></center>
-        </section>
-
-        <section id="kontakt">
-            <center><h2>Kontakt</h2></center>
-            <center><p>Pro více informací, dárkové poukazy, či objednání služeb mne neváhejte kontaktovat. </p></center>
-            <center><h3>Mgr. Dominik Pospíšil
-                Hradišťská 52/68, 
-                Těrlicko 73542
-                Tel. +420 739 950 965, 
-                Dominik.pospisil@outlook.cz</h3></center>
-                <center><p>Sledujte mně také na sociálních sítích. </p></center>
-        </section>
-    </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-icons">
-            <a href="https://www.instagram.com/dmakuakane/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/domino.pospisil.9/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
+            <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
             <a href="mailto:dominik.pospisil@outlook.cz"><img src="email.png" alt="Email"></a>
         </div>
         <p>© 2024 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
     </footer>
-
 </body>
 </html>
