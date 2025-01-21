@@ -56,15 +56,6 @@ p {
     z-index: -1;
 }
 
- /* Globální styl */
- body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    overflow-x: hidden;
-    padding-top: 60px;
-}
-
 /* Navigace */
 nav {
     position: fixed;
@@ -390,6 +381,8 @@ footer {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+
 }
 
 .contact-form label {
@@ -435,15 +428,6 @@ footer {
   /* Kontaktní formulář */
 --------
 
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    overflow-x: hidden;
-    padding-top: 60px; /* Prostor pro fixní navigaci */
-}
-
 .gradient-bg {
     position: fixed;
     top: 0;
@@ -457,15 +441,56 @@ body {
 /* Sekce s parallax efektem */
 .parallax {
     background-attachment: fixed;
-    background-size: cover;
     background-position: center;
-    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* min-height: 400px;  ODSTRANIT tuto pevnou výšku */
+    padding: 100px 0;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Styly pro mobilní zobrazení */
+@media (max-width: 767px) {
+    .parallax {
+        background-attachment: scroll; /* Důležité pro mobily */
+        padding: 50px 0; /* Menší padding na mobilech */
+        min-height: auto;
+        display: block;
+    }
+    .content{
+        text-align: left;
+    }
+}
+/* ... ostatní styly ... */
+
+#intro {
+    background-image: url('masage.jpg');
+}
+
+#about {
+    background-image: url('relax.jpg');
+}
+
+#services {
+    background-image: url('banka.jpg');
+}
+
+#contact {
+    background-image: url('salon.jpg');
+}
+
+/* ... ostatní styly ... */
 
 .parallax-text {
     background: rgba(0, 0, 0, 0.5);
