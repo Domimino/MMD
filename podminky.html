@@ -3,93 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podmínky | Mobilní Masér Dominik</title>
+    <title>Podmínky a Provozní řád | Mobilní Masér Dominik</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="icon" type="image/png" href="logo.jpg">
 </head>
 <body>
-    <div class="gradient-bg"></div>
 
     <!-- Navigační panel -->
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-            </div>
+            <a href="index.html" class="nav-logo">
+                <img src="logo.jpg" alt="Logo Dominik">
+                <span>Mobilní Masér Dominik</span>
+            </a>
+            
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-label">
-                <img src="navicon.png" alt="Rozbalit navigaci">
+            <label for="menu-toggle" class="menu-label" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </label>
-            <ul class="nav-bar">
-                <li><a href="index.html">Domů</a></li>
-            <li><a href="nabidka.html">Nabídka</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="nabidka.html">Služby & Ceník</a></li>
+                <li><a href="podminky.html" class="active">Podmínky</a></li>
+                <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hlavička -->
-    <header>
-        <h1></h1>
-    </header>
-    <section id="services" class="parallax" style="background-image: url('banka.jpg');">
-        <div class="content">
-    <div class="content-box">
-        
-        
+    <!-- Hlavní obsah - Podmínky -->
+    <main class="page-content">
+        <div class="content-box terms-content">
+            <div class="section-header">
+                <span class="section-subtitle">Důležité informace</span>
+                <h1>Podmínky & Provozní řád</h1>
+            </div>
 
-            <h2>Požadavky k výkoně služeb</h2>
-            <center><h3>- přístup k pitné tekoucí teplé vodě</h3></center>
-                <center><h3>- dostatečné osvětlení místnosti</h3></center>
-                <center><h3>- možnost převléknutí se do pracovního oděvu</h3></center>
-                <center><h3>- dostatečný prostor pro rozložení přenosného masérského stolu či podložky v případě masáže na zemi</h3></center>
-        
-        
-            <h2>Druh a rozsah poskytovaných služeb viz:</h2>
-            <center><p>https://www.mobilnimaserdominik.cz/nabidka/
-                Tyto služby jsou poskytovány v interiérech a exteriérech dle požadavků klienta. </p></center>
+            <div style="margin-bottom: 30px;">
+                <h2>Požadavky k výkonu služeb</h2>
+                <ul style="list-style-type: disc; padding-left: 20px; text-align: left; margin: 15px auto; max-width: 600px; color: var(--text-muted);">
+                    <li>Přístup k pitné tekoucí teplé vodě</li>
+                    <li>Dostatečné osvětlení místnosti</li>
+                    <li>Možnost převléknutí se do pracovního oděvu</li>
+                    <li>Dostatečný prostor pro rozložení přenosného masérského stolu či podložky v případě masáže na zemi</li>
+                </ul>
+            </div>
 
+            <div style="margin-bottom: 30px;">
+                <h2>Rozsah poskytovaných služeb</h2>
+                <p>Služby jsou poskytovány v interiérech a exteriérech dle požadavků klienta. Kompletní přehled viz <a href="nabidka.html" style="color: var(--primary); font-weight: 600;">nabídka</a>.</p>
+            </div>
 
-                <h2>Stavy vylučující masáž</h2>
-                <center><h3>- horečnaté stavy</h3></center>
-                    <center><h3>- zánětlivá či infekční onemocnění celého těla (chřipka, angína)</h3></center>
-                    <center><h3>- první trimestr těhotenství a v případě rizikového těhotenství</h3></center>
-                    <center><h3>- nádorová onemocnění, v době akutního průběhu a 12 měsíců po doléčení</h3></center>
-                    <center><h3>- akutní pooperační a poúrazové stavy</h3></center>
-                    <center><h3>- srdeční onemocnění (infarkt, aritmie, je třebe konzultace z Vašim ošetřujícím lékaře o vhodnosti masáže)</h3></center>
-                    <center><h3>- problémy se srážlivostí krve a kornatění tepen</h3></center>
-                    <center><h3>- při poraněních dutiny břišní</h3></center>
-                    <center><h3>- při stavech vyžadující klid na lůžku</h3></center>
-                    <center><h3>- bezprostředně po jídle</h3></center>
-                    <center><h3>- při akutních psychózách a stavech pod vlivem alkoholu a drog</h3></center>
+            <div style="margin-bottom: 30px;">
+                <h2>Stavy vylučující masáž (Kontraindikace)</h2>
+                <ul style="list-style-type: disc; padding-left: 20px; text-align: left; margin: 15px auto; max-width: 600px; color: var(--text-muted);">
+                    <li>Horečnaté stavy</li>
+                    <li>Zánětlivá či infekční onemocnění celého těla (chřipka, angína)</li>
+                    <li>První trimestr těhotenství a v případě rizikového těhotenství</li>
+                    <li>Nádorová onemocnění (v době akutního průběhu a 12 měsíců po doléčení)</li>
+                    <li>Akutní pooperační a poúrazové stavy</li>
+                    <li>Srdeční onemocnění (infarkt, arytmie – nutná konzultace s ošetřujícím lékařem)</li>
+                    <li>Problémy se srážlivostí krve a kornatění tepen</li>
+                    <li>Poranění dutiny břišní</li>
+                    <li>Stavy vyžadující klid na lůžku</li>
+                    <li>Bezprostředně po jídle</li>
+                    <li>Akutní psychózy a stavy pod vlivem alkoholu či drog</li>
+                </ul>
+            </div>
 
+            <div style="margin-bottom: 30px;">
                 <h2>Provozní doba</h2>
-                <p>Flexibilní, přizpůsobená potřebám zákazníků. Masérské služby jsou poskytovány vždy na základě objednávek prostřednictvím telefonu, e-mailu nebo osobního kontaktu, a to v čase a na místě dle dohody se zákazníky.</p>
-        
-                
-                <center><p>Za dodržování výše uvedeného odpovídá: Mgr. Dominik Pospíšil</p></center>
-                <h3>Provozovatel: Masérské, rekondiční a regenerační služby je MMD, se sídlem: Hradišťská 52/68, Těrlicko, 73542
-                    IČ: 21618101
-                    Tel.: +420 739 950 965
-                    E-mail: dominik.pospisil@outlook.cz
-                    Provozní doba: dle telefonických objednávek
-                    Oprávnění pro výkon činnosti: viz www.rzp.cz a IČ</h3>
+                <p>Flexibilní, přizpůsobená potřebám zákazníků. Služby jsou poskytovány na základě objednávek (telefon, e-mail) v čase a na místě dle vzájemné dohody.</p>
+            </div>
 
-       
-    </div>
-</div>
-</section>
-    <div><center><a href="Provozni rad MMD.pdf" download style="text-decoration: none; color: blue; font-weight: bold;">Provozní řád ke stažení pdf</a></center></div>
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin-top: 40px; text-align: left;">
+                <p style="text-align: left; margin-bottom: 8px;"><strong>Provozovatel:</strong> MMD (Masérské, rekondiční a regenerační služby)</p>
+                <p style="text-align: left; margin-bottom: 8px;"><strong>Sídlo:</strong> Hradišťská 52/68, Těrlicko, 73542</p>
+                <p style="text-align: left; margin-bottom: 8px;"><strong>IČ:</strong> 21618101</p>
+                <p style="text-align: left; margin-bottom: 8px;"><strong>Odpovědná osoba:</strong> Mgr. Dominik Pospíšil</p>
+                <p style="text-align: left; margin-bottom: 0;"><strong>Oprávnění pro výkon činnosti:</strong> viz <a href="https://www.rzp.cz" target="_blank" style="color: var(--primary);">www.rzp.cz</a> a IČ</p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="Provozni rad MMD.pdf" download class="btn btn-primary" style="background-color: var(--primary); text-decoration: none;">Stáhnout provozní řád (PDF)</a>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-            <a href="mailto:dominik.pospisil@outlook.cz"><img src="email.png" alt="Email"></a>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h4>Mobilní Masér Dominik</h4>
+                <p>Mobilní masérské služby přímo u vás.</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
+            </div>
         </div>
-        <p>© 2024 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
     </footer>
 </body>
 </html>
