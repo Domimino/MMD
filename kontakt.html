@@ -4,77 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | Mobilní Masér Dominik</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="icon" type="image/png" href="logo.jpg">
 </head>
 <body>
-    <div class="gradient-bg"></div>
 
     <!-- Navigační panel -->
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-            </div>
+            <a href="index.html" class="nav-logo">
+                <img src="logo.jpg" alt="Logo Dominik">
+                <span>Dominik Pospíšil</span>
+            </a>
+            
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-label">
-                <img src="navicon.png" alt="Rozbalit navigaci">
+            <label for="menu-toggle" class="menu-label" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </label>
-            <ul class="nav-bar">
-                <li><a href="index.html">Domů</a></li>
-            <li><a href="podminky.html">Podmínky</a></li>
-            <li><a href="nabidka.html">Nabídka</a></li>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="nabidka.html">Služby & Ceník</a></li>
+                <li><a href="podminky.html">Podmínky</a></li>
+                <li><a href="kontakt.html" class="active nav-btn">Kontakt</a></li>
             </ul>
         </div>
     </nav>
-    
-    <!-- Hlavička -->
-    <header>
-    </header>
-    <section id="intro" class="parallax" style="background-image: url('masage.jpg');">
-    <div class="content">
-    <div class="content-box">
-        <h1>Kontaktní údaje</h1>
-        <h3>Mgr. Dominik Pospíšil</h3>
-        <h3>Tel.: +420 739 950 965</h3>
-        <h3>E-mail: Dominik.pospisil@outlook.cz</h3>
-        <h3>Adresa: Hradišťská 52/68, Těrlicko 73542</h3>
 
-        <h2></h2>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+    <!-- Hlavní obsah - Kontakt -->
+    <main class="page-content">
+        <div class="content-box">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <span class="section-subtitle">Spojte se se mnou</span>
+                <h1>Kontaktní údaje</h1>
+            </div>
+
+            <div class="contact-info-grid" style="margin-bottom: 40px; text-align: center;">
+                <p><strong>Mgr. Dominik Pospíšil</strong></p>
+                <p>Tel.: <a href="tel:+420739950965" style="color: var(--primary); text-decoration: none; font-weight: 600;">+420 739 950 965</a></p>
+                <p>E-mail: <a href="mailto:dominik.pospisil@outlook.cz" style="color: var(--primary); text-decoration: none; font-weight: 600;">dominik.pospisil@outlook.cz</a></p>
+                <p>Adresa: Hradišťská 52/68, Těrlicko 73542</p>
+            </div>
+
+            <div class="footer-icons" style="margin-bottom: 40px;">
+                <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank" aria-label="LinkedIn"><img src="linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank" aria-label="Instagram"><img src="instagram.png" alt=""></a>
+                <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank" aria-label="Facebook"><img src="facebook.png" alt=""></a>
+            </div>
+
+            <div class="section-header" style="margin-bottom: 20px;">
+                <h2>Napište mi zprávu</h2>
+            </div>
+            
+            <form action="https://formspree.io/f/xanqweae" method="POST" class="contact-form">
+                <!-- Pokud chceš po odeslání přesměrovat na vlastní děkovací stránku, odkomentuj řádek níže -->
+                <!-- <input type="hidden" name="_next" value="https://tvujweb.cz/dekuji.html"> -->
+                
+                <label for="name">Jméno a Příjmení:</label>
+                <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Váš e-mail" required>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon" required>
+
+                <label for="message">Zpráva:</label>
+                <textarea id="message" name="message" placeholder="Dobrý den, rád/a bych si objednal/a masáž (záda, šíje)..." required></textarea>
+
+                <button type="submit">Odeslat zprávu</button>
+            </form>
         </div>
+    </main>
 
-        <h2>Kontaktní formulář</h2>
-        <form action="https://formspree.io/f/xanqweae" method="post"  class="contact-form">
-  <label for="name">Jméno a Příjmení:</label>
-  <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
-
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" placeholder="Váš e-mail" required>
-
-  <label for="phone">Telefon:</label>
-  <input type="tel" id="phone" name="phone" placeholder="Váš telefon" required>
-
-  <label for="message">Zpráva:</label>
-  <textarea id="message" name="message" placeholder="Vaše zpráva: Dobrý den, rád bych si objednal masáž (záda šíje), termín 1.2.2024, Díky s pozdravem Novotný." required></textarea>
-
-  <button type="submit">Odeslat</button>
-</form>
-    </div>
-</div>
-</section>
     <!-- Footer -->
-    <footer>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-            <a href="mailto:dominik.pospisil@outlook.cz"><img src="email.png" alt="Email"></a>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h4>Mobilní Masér Dominik</h4>
+                <p>Mobilní masérské služby přímo u vás.</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
+            </div>
         </div>
-        <p>© 2024 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
     </footer>
 </body>
 </html>
