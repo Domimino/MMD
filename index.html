@@ -4,126 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="mobilní masér Český Těšín, sportovní masáž Havířov, regenerační masáž Karviná, masáž doma Třinec, masér Těrlicko, masáže Frýdek-Místek, mobilní masér Bohumín">
-    <meta name="description" content="Mobilní masér Dominik nabízí sportovní a regenerační masáže přímo u vás doma v Českém Těšíně, Těrlicku, Havířově, Karviné, Třinci a okolí. Masáže pro sportovce i relaxaci.">
-    <title>Mobilní masér Dominik | Sportovní a regenerační masáže Český Těšín - Těrlicko - Havířov - Karviná - Frýdek Místek</title>
+    <meta name="description" content="Mobilní masér Dominik nabízí sportovní a regenerační masáže přímo u vás doma v Českém Těšíně, Těrlicku, Havířově, Karviné, Třinci a okolí.">
+    <title>Mobilní masér Dominik | Profesionální masáže u vás doma</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <script src="Script.js" defer></script>
     <link rel="icon" type="image/png" href="logo.jpg">
-    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <div class="gradient-bg"></div>
 
     <!-- Navigační panel -->
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-            </div>
+            <a href="index.html" class="nav-logo">
+                <img src="logo.jpg" alt="Logo Dominik">
+                <span>Mobilní Masér Dominik</span>
+            </a>
+            
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-label">
-                <img src="navicon.png" alt="Rozbalit navigaci">
+            <label for="menu-toggle" class="menu-label" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </label>
-            <ul class="nav-bar">
-                <li><a href="index.html">Úvod</a></li>
-                <li><a href="#about">O Mně</a></li>
-                <li><a href="nabidka.html">Nabídka</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Úvod</a></li>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="nabidka.html">Služby & Ceník</a></li>
+                <li><a href="podminky.html">Podmínky</a></li>
+                <li><a href="kontakt.html" class="nav-btn">Objednat se</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Úvodní sekce -->
-    
-        <section id="intro" class="parallax" style="background-image: url('masage.jpg');">
-        <div class="content">
-            <div class="content-box">
-            <div><center><img src="logo.jpg" alt="Logo" class="logo"></center></div>
-            <h1>Mobilní Masér Dominik</h1>
-            <h3>Úleva a relaxace přímo do Vašeho domova</h3>
+    <!-- Úvodní Hero sekce -->
+    <header class="hero" style="background-image: url('masage.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Mobilní masér Moravskoslezský kraj</span>
+            <h1>Úleva, zdraví a hluboká relaxace<br>přímo u vás doma</h1>
+            <p>Profesionální sportovní, regenerační a terapeutické masáže s dojezdem do Českého Těšína, Havířova, Karviné, Třince a okolí.</p>
+            <div class="hero-buttons">
+                <a href="kontakt.html" class="btn btn-primary">Rezervovat termín</a>
+                <a href="nabidka.html" class="btn btn-outline">Prohlédnout nabídku</a>
             </div>
         </div>
-        </section>
-    
+    </header>
 
-        <section id="about" class="section about-parallax">
-            <div class="content">
-                <h2>O Mně</h2>
-                <div class="about-us-grid">
-                    <div class="about-us-image">
-                        <img src="id.jpeg" alt="Mobilní masér Dominik – sportovní a relaxační masáže Český Těšín">
+    <!-- Sekce O mně -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="id.jpeg" alt="Mgr. Dominik Pospíšil - mobilní masér">
+                    <div class="experience-badge">
+                        <span class="number">6+</span>
+                        <span class="text">let praxe v oboru</span>
                     </div>
-                    <div class="about-us-content">
-                        <h3 class="short-description">Ahoj, jsem Dominik, profesionální mobilní masér.</h3>
-                        <button class="toggle-button">Více o mně</button>
-                        <div class="hidden-content hidden">
-                            <h3>Jsem absolventem Fakulty tělesné kultury Univerzity Palackého v Olomouci. Masážím se věnuji již 6 let a svou práci neustále zdokonaluji dalším vzděláváním.</h3>
-                            <h3>Zastávám přístup holistické péče a funkční medicíny, díky čemuž se snažím nejen ulevit od akutních či chronických potíží, ale také podpořit celkovou rovnováhu těla a duše. Při práci s klienty preferuji individuální přístup, kdy se věnuji jejich potřebám s maximální péčí a empatií.</h3>
-                            <h3>Pokud hledáte maséra, který kombinuje odborné znalosti s osobním přístupem a láskou k pohybu, rád vám pomohu dosáhnout lepšího zdraví a pohody.</h3>
-                        </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-subtitle">O mně</span>
+                    <h2>Ahoj, jsem Dominik</h2>
+                    <p class="lead">Jsem absolventem Fakulty tělesné kultury Univerzity Palackého v Olomouci a svou práci neustále posouvám kupředu.</p>
+                    
+                    <button class="toggle-button" aria-expanded="false"><span>Více o mém přístupu</span></button>
+                    
+                    <div class="hidden-content">
+                        <p>Zastávám přístup holistické péče a funkční medicíny. Mým cílem není jen krátkodobě ulevit od akutní či chronické bolesti, ale podpořit celkovou rovnováhu těla i mysli.</p>
+                        <p>Ke každému klientovi přistupuji maximálně individuálně a s empatií. Využijte pohodlí vlastní obývací místnosti – veškeré vybavení včetně profesionálního stolu přivezu za vámi.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-    <!-- Sekce Služby -->
-    
-    <section id="services" class="parallax" style="background-image: url('banka.jpg');">
-        <div class="content">
-            <div class="content-box">
-            <h2>Nabídka</h2>
-            <h3>Od relaxačních masáží po sportovní regeneraci, nabízíme širokou škálu služeb přizpůsobených vašim potřebám.</h3>
-            <center><a href="nabidka.html" class="more-link">Zjistěte více</a></center>
-            </div>
-        </div>
-    </section>
-    
-
-     <!-- Sekce Podmínky -->
-     
-     <section id="services" class="parallax" style="background-image: url('therapy.jpg');">
-        <div class="content">
-            <div class="content-box">
-            <h2>Podmínky</h2>
-            <h3>Abychom byli spokojení všichni :)</h3>
-            <center><a href="podminky.html" class="more-link">Dokumenty k nahlédnutí</a></center>
-            </div>
         </div>
     </section>
 
-
-    <!-- Sekce Kontakt -->
-    
-    <section id="services" class="parallax" style="background-image: url('salon.jpg');">
-        <div class="content">
-            <div class="content-box">
-            <h2>Kontakt</h2>
-            <h3>Napište mi nebo rovnou zavolejte a domluvíme se.</h3>
-            <center><a href="kontakt.html" class="more-link">Objednejte si mé služby</a></center>
+    <!-- Rychlý rozcestník / Karty služeb -->
+    <section class="cards-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">V čem vám pomůžu</span>
+                <h2>Co na webu najdete</h2>
+            </div>
+            <div class="cards-grid">
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('banka.jpg');">
+                    <div class="card-content">
+                        <h3>Kompletní nabídka</h3>
+                        <p>Záda, šíje, končetiny, baňkování i sportovní regenerace.</p>
+                        <a href="nabidka.html" class="card-link">Zobrazit ceník &rarr;</a>
+                    </div>
+                </div>
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('therapy.jpg');">
+                    <div class="card-content">
+                        <h3>Provozní podmínky</h3>
+                        <p>Co je potřeba připravit a kdy je masáž vhodná.</p>
+                        <a href="podminky.html" class="card-link">Prostudovat &rarr;</a>
+                    </div>
+                </div>
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('salon.jpg');">
+                    <div class="card-content">
+                        <h3>Rychlý kontakt</h3>
+                        <p>Zavolejte mi nebo napište přes rezervační formulář.</p>
+                        <a href="kontakt.html" class="card-link">Spojit se &rarr;</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-size: 0.95rem; line-height: 1.6; color: #333;">
-  <h2 style="text-align:center;">Profesionální masáže – Moravskoslezský kraj</h2>
-  <p>
-    Mobilní masér Dominik nabízí sportovní a regenerační masáže přímo u vás doma nebo na pracovišti
-    v Českém Těšíně, Těrlicku, Havířově, Karviné, Třinci, Frýdku-Místku, Bohumíně a okolí.  
-    Specializuji se na masáže pro sportovce, relaxační masáže a terapeutickou péči při pohybových
-    problémech. Pokud hledáte kvalitu, spolehlivost a profesionální přístup, Mobilní masér Dominik je
-    správná volba.
-  </p>
-</section>
+    <!-- SEO lokalita -->
+    <section class="seo-strip">
+        <div class="container text-center">
+            <h3>Působnost v Moravskoslezském kraji</h3>
+            <p>Český Těšín | Těrlicko | Havířov | Karviná | Třinec | Frýdek-Místek | Bohumín</p>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-            <a href="mailto:dominik.pospisil@outlook.cz"><img src="email.png" alt="Email"></a>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h4>Mobilní Masér Dominik</h4>
+                <p>Mobilní masérské služby přímo u vás.</p>
+            </div>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/dominik-posp%C3%AD%C5%A1il-302129266/" target="_blank" aria-label="LinkedIn"><img src="linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/mobilnimaserdominik/" target="_blank" aria-label="Instagram"><img src="instagram.png" alt=""></a>
+                <a href="https://www.facebook.com/MobilniMaserDominik/" target="_blank" aria-label="Facebook"><img src="facebook.png" alt=""></a>
+                <a href="mailto:dominik.pospisil@outlook.cz" aria-label="Email"><img src="email.png" alt=""></a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
+            </div>
         </div>
-        <p>© 2024 Mobilní Masér Dominik. Všechna práva vyhrazena.</p>
     </footer>
 </body>
 </html>
